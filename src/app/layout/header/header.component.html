@@ -1,0 +1,64 @@
+<!-- Government of Canada Banner -->
+<section id="wb-bnr">
+  <div class="container">
+    <div class="gc-sig">
+      <div class="gc-sig-left">
+        <a href="https://www.canada.ca/en.html">
+          <!-- GC Signature: Flag + Text -->
+          <svg class="gc-sig-img" viewBox="0 0 400 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="5" width="30" height="18" fill="#af3c43"/>
+            <polygon points="15,5 18,11 24,11 19,15 21,21 15,17 9,21 11,15 6,11 12,11" fill="#fff"/>
+            <text x="38" y="16" font-size="11" font-family="'Noto Sans', sans-serif" fill="#333" font-weight="700">Government of Canada</text>
+            <text x="38" y="30" font-size="10" font-family="'Noto Sans', sans-serif" fill="#333">Gouvernement du Canada</text>
+          </svg>
+        </a>
+      </div>
+      <div class="gc-sig-right">
+        <div id="wb-lng">
+          <a href="#" lang="fr">Français</a>
+        </div>
+        <div class="gc-search">
+          <input type="search" placeholder="Search Canada.ca">
+          <button type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Navigation -->
+<nav class="gc-nav">
+  <div class="container">
+    @if (navOrder === 'default') {
+      <ul class="nav-list">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/menu" routerLinkActive="active">Menu</a></li>
+        <li><a routerLink="/order" routerLinkActive="active">Order</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
+      </ul>
+    }
+    <!-- A11Y-ISSUE #19: 3.2.3 Consistent Navigation — Reordered nav on Contact page -->
+    @if (navOrder === 'reordered') {
+      <ul class="nav-list">
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/cart" routerLinkActive="active">Cart</a></li>
+        <li><a routerLink="/order" routerLinkActive="active">Order</a></li>
+        <li><a routerLink="/menu" routerLinkActive="active">Menu</a></li>
+      </ul>
+    }
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<nav id="wb-bc" aria-label="breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="https://www.canada.ca/en.html">Canada.ca</a></li>
+      <li><a routerLink="/">Café Canada</a></li>
+    </ol>
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.gc-sig-left {
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+}
+
+.gc-sig-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav.gc-nav {
+  .active {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+}

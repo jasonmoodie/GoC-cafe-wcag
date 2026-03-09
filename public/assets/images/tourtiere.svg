@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#fff3e0"/>
+  <circle cx="150" cy="90" r="60" fill="#d4a76a"/>
+  <circle cx="150" cy="90" r="50" fill="#8d6e63"/>
+  <path d="M 120 80 L 130 70 L 140 85 L 150 65 L 160 85 L 170 70 L 180 80" fill="none" stroke="#fff3e0" stroke-width="2"/>
+  <text x="150" y="175" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5a3a1a">Tourtière</text>
+</svg>

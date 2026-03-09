@@ -1,0 +1,77 @@
+<!-- Hero Banner -->
+<section class="hero-banner">
+  <!-- A11Y-ISSUE #2: 1.1.1 Non-text Content — Decorative image without alt="" -->
+  <img src="assets/images/hero-coffee.svg" class="hero-img">
+  <h1>Welcome to Café Canada</h1>
+  <p>Serving the finest Canadian coffee from coast to coast to coast. Experience our handcrafted beverages and artisan pastries.</p>
+</section>
+
+<div class="container">
+  <!-- What's New Section -->
+  <h2 class="section-title">What's new</h2>
+
+  <!-- A11Y-ISSUE #14: 1.4.3 Contrast (Minimum) — Low contrast text on white bg -->
+  <p class="low-contrast-text">Discover our latest seasonal offerings and community events happening at Café Canada locations across the country.</p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="assets/images/maple-latte.svg" alt="Maple latte in a white ceramic mug">
+        <h3>Maple Latte</h3>
+        <p>Our signature drink featuring pure Canadian maple syrup and locally roasted espresso.</p>
+        <span class="price">$5.75</span>
+
+        <!-- A11Y-ISSUE #11: 4.1.2 Name, Role, Value — div acting as button without role or tabindex -->
+        <div class="btn-primary mt-20" (click)="addToCart()" style="display:inline-block; cursor:pointer;">
+          Add to Cart
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="assets/images/butter-tart.svg" alt="Fresh butter tart with flaky golden pastry">
+        <h3>Butter Tart</h3>
+        <p>A classic Canadian treat — buttery, gooey, and made fresh daily at every location.</p>
+        <span class="price">$3.50</span>
+        <button class="btn-primary mt-20" (click)="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="assets/images/cold-brew.svg" alt="Cold brew coffee in a tall glass with ice">
+        <h3>Northern Cold Brew</h3>
+        <!-- A11Y-ISSUE #14: 1.4.3 Contrast (Minimum) — Low contrast description -->
+        <p class="low-contrast-text">Slow-steeped for 18 hours using beans from our Northern Ontario partner farms.</p>
+        <span class="price">$4.95</span>
+        <button class="btn-primary mt-20" (click)="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Links Section -->
+  <h2 class="section-title">Explore Café Canada</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <h3>Our menu</h3>
+        <p>Browse our selection of handcrafted beverages, pastries, and light meals.</p>
+        <!-- A11Y-ISSUE #8: 2.4.4 Link Purpose — Non-descriptive link text -->
+        <a routerLink="/menu">Click here</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <h3>Place an order</h3>
+        <p>Order ahead and skip the line at your nearest Café Canada.</p>
+        <!-- A11Y-ISSUE #8: 2.4.4 Link Purpose — Non-descriptive link text -->
+        <a routerLink="/order">Read more</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Community Section -->
+  <h2 class="section-title">Community</h2>
+  <p>Café Canada is committed to supporting local communities across the country. We source our beans from Canadian-partnered farms and donate a portion of every purchase to food banks nationwide.</p>
+  <!-- A11Y-ISSUE #8: 2.4.4 Link Purpose — Another non-descriptive link -->
+  <p>Learn about our community initiatives. <a routerLink="/about">Click here</a></p>
+</div>

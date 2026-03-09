@@ -1,0 +1,48 @@
+<div class="container">
+  <h1 class="section-title">Your cart</h1>
+
+  @if (cartItems.length === 0) {
+    <p>Your cart is empty. Visit our <a href="/menu">menu</a> to start ordering.</p>
+  }
+
+  @if (cartItems.length > 0) {
+    <!-- A11Y-ISSUE #16: 2.4.6 Headings and Labels — Non-descriptive heading -->
+    <h2>Section 1</h2>
+
+    <!-- Cart Items -->
+    @for (item of cartItems; track item.name; let i = $index) {
+      <div class="cart-item">
+        <div class="cart-item-info">
+          <strong>{{ item.name }}</strong>
+          <span class="low-contrast-text"> — {{ item.size }}</span>
+        </div>
+        <div class="cart-item-actions">
+          <label class="visually-hidden">Quantity for {{ item.name }}</label>
+          <input type="number" [value]="item.quantity" min="1" max="10"
+                 (change)="updateQuantity(i, $any($event.target).value)"
+                 class="qty-input">
+          <span class="price">{{ item.price * item.quantity | currency:'CAD':'symbol-narrow' }}</span>
+          <button class="btn-danger" (click)="removeItem(i)">Remove</button>
+        </div>
+      </div>
+    }
+
+    <!-- A11Y-ISSUE #21: 4.1.3 Status Messages — Cart totals update without aria-live region -->
+    <div class="cart-summary">
+      <!-- A11Y-ISSUE #16: 2.4.6 — Another non-descriptive heading -->
+      <h2>Section 2</h2>
+      <div class="cart-total-line">
+        <span>Subtotal</span>
+        <span>{{ subtotal | currency:'CAD':'symbol-narrow' }}</span>
+      </div>
+      <div class="cart-total-line">
+        <span>HST (13%)</span>
+        <span>{{ tax | currency:'CAD':'symbol-narrow' }}</span>
+      </div>
+      <div class="cart-total">
+        <span>Total: {{ total | currency:'CAD':'symbol-narrow' }}</span>
+      </div>
+      <button class="btn-primary mt-20">Proceed to checkout</button>
+    </div>
+  }
+</div>

@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.hero-banner {
+  position: relative;
+
+  .hero-img {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.3;
+  }
+}

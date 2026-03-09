@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <rect width="300" height="200" fill="#f5e6d3"/>
+  <rect x="70" y="70" width="160" height="50" rx="5" fill="#5d4037"/>
+  <rect x="70" y="70" width="160" height="18" fill="#f5deb3"/>
+  <rect x="70" y="103" width="160" height="17" fill="#d7ccc8"/>
+  <text x="150" y="160" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5a3a1a">Nanaimo Bar</text>
+</svg>

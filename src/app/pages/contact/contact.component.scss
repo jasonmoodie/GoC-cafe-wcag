@@ -1,0 +1,23 @@
+:host {
+  display: block;
+}
+
+.location-card {
+  background: #f8f8f8;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-left: 3px solid #26374a;
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 1em;
+    color: #26374a;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+}
